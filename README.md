@@ -1,4 +1,4 @@
-![2023-08-20 00 22 19](https://github.com/HackTheBridge/html_editor/assets/110546197/c54d0eee-ea01-4623-925e-fc9c0c0684cb)# html_editor
+# html_editor
 HTML editor and viewer to help learn HTML and view the changes in real-time.
 
 # Setting up
