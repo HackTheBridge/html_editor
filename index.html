@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Editor and Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        textarea {
+            width: 50%;
+            height: 100vh;
+            resize: none;
+            border: none;
+            padding: 10px;
+        }
+        iframe {
+            width: 50%;
+            height: 100vh;
+            border: none;
+        }
+    </style>
+    <script>
+        function updateIframe() {
+            var iframe = document.getElementById('preview');
+            var editor = document.getElementById('editor');
+            iframe.contentWindow.document.open();
+            iframe.contentWindow.document.write(editor.value);
+            iframe.contentWindow.document.close();
+        }
+    </script>
+</head>
+<body>
+    <textarea id="editor" onkeyup="updateIframe()"><h1>Hello, World!</h1></textarea>
+    <iframe id="preview"></iframe>
+    <script>
+        updateIframe(); // Initial update
+    </script>
+</body>
+</html>
